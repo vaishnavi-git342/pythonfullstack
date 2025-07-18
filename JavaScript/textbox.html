@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>JavaScript-Required Field Validator for TextBoxon Submit </title>
+<style >
+.reqError{
+color: #ff79aa; /*Red Color*/
+font-weight:bold;
+}
+</style>
+<script>
+//function to check validation (Required field)
+
+function checkReqField(){
+var returnValue=true;
+var name=document.getElementById("txtName").value;
+var email=document.getElementById("txtEmail").value;
+  document.getElementById("reqTxtName").innerHTML="";
+  document.getElementById("reqTxtEmail").innerHTML="";
+if(email.trim()==""){
+
+	document.getElementById("reqTxtEmail").innerHTML="*Addressisrequired.";
+	returnValue=false;
+}
+if(email !=""){
+
+	var chkemail=looksLikeMail(email);
+	// alert(chkemail);
+		if(!chkemail){
+			document.getElementById("reqTxtEmail").innerHTML="*Address invalid.";
+			returnValue=false;
+		}
+}if(name.trim()==""){
+	document.getElementById("reqTxtName").innerHTML="* Nameisrequired.";
+	returnValue=false;
+	}
+
+  return returnValue;    
+}
+ function  looksLikeMail(str) {
+	pattern=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	if(pattern.test(str)) {
+	     return true;
+	} else {
+	  return false;
+	}
+}
+</script>
+</head>
+<body>
+<h1>JavaScript - Required Field Validator for TextBox onSubmit </h1>
+<form onsubmit="return checkReqField()">
+<b>Enter Name: </b><br>
+<input type="text" id="txtName"/>
+<span id="reqTxtName" class="reqError"></span><br>
+<br>
+<b>Enter Email Address: </b><br>
+<input type="text" id="txtEmail"/>
+<span id="reqTxtEmail" class="reqError"></span><br>
+<p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>	
+
+
+
+
+
+

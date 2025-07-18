@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+         <h1>The Document Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+ <p id=”demo”>This is a p element</p>
+<p>This is also a p element.</p>
+<p>This is also a p element.</p>
+<h1 class="example"></h1>
+<h2 class="example"></h2>
+<h3 class="example"></h3>
+<script>
+const collection = document.getElementsByClassName("example");
+alert(collection);
+console.log(collection);
+document.write(collection);
+collection[0].innerHTML = "Milk";
+collection[1].innerHTML = "Sugar";
+collection[2].innerHTML = "Coffee";
+ </script>
+
+    </body>
+</html>

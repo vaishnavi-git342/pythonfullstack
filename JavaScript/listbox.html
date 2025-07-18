@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>JavaScript - Add user entered item into ListBox.</title>
+		
+	</head>
+<body style="text-align: center;">
+	<h1>JavaScript - Add user entered item into ListBox.</h1>
+	<form>
+		<p><big>Enter your favourite accessory: </big></p>
+		<p><input type="text" id="txtItem"/></p>
+		<p><input type="button" onclick="insertItemIntoListBox()" value="Insert"/></p>
+		<select id="access" size="10">
+			<option>Mobile</option>
+			<option>Tablet</option>
+		</select>
+	</form>
+
+
+
+<script type="text/javascript">
+			function insertItemIntoListBox(){
+				var x=document.getElementById("access");
+				var item=document.getElementById("txtItem").value;
+				var option=document.createElement("option");
+				option.text=item;
+				x.add(option);
+				alert(item + " has been added.");
+			}
+		</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
