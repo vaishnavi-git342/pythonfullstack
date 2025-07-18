@@ -1,0 +1,48 @@
+<!-- <html>
+	<head>
+		<title>JavaScript - Print Selected Item from SelectBox.</title>
+	</head>
+<body style="text-align: center;">
+	<h1>JavaScript - Print Selected Item from SelectBox.</h1>
+	<big>Select your favourite city:</big>
+	<select id='cities' onchange='printSelectedItem()'>
+		<option value="New york">New york</option>
+		<option value="New jersey">New jersey</option>
+		<option value="Washington DC">Washington DC</option>
+	</select>
+
+<script >
+			function printSelectedItem(){
+				var e=document.getElementById('cities');
+				var selectedItem=e.options[e.selectedIndex].value;
+				alert(selectedItem);
+			}
+		</script>
+
+</body>
+</html> -->
+<html>
+<head>
+    <title>JavaScript - Print Selected Item from SelectBox</title>
+</head>
+<body style="text-align: center;">
+    <h1>JavaScript - Print Selected Item from SelectBox</h1>
+    <big>Select your favourite city:</big>
+    <br><br>
+    <select id='cities'>
+        <option value="New york">New york</option>
+        <option value="New jersey">New jersey</option>
+        <option value="Washington DC">Washington DC</option>
+    </select>
+    <br><br>
+    <button onclick="printSelectedItem()">Submit</button>
+
+    <script>
+        function printSelectedItem() {
+            var e = document.getElementById('cities');
+            var selectedItem = e.options[e.selectedIndex].value;
+            alert("You selected: " + selectedItem);
+        }
+    </script>
+</body>
+</html>
