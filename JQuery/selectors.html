@@ -1,0 +1,27 @@
+<style>
+    .c1 { color: #000; }
+    .c2 { color: #F00; }
+</style>
+
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+    <p>Read values from elements that have a class defined!</p>
+
+
+    <span class="c1">A</span>
+        <span>R</span>
+         <span>U</span>
+        <span class="c1">N</span>
+    <p></p>
+</body>
+<script>
+    $(document).ready(function () {
+        // GET VALUES OF SPANS WITH A SPECIFIC CLASS NAME.
+        $('.c1').each(function () {
+            $(this).addClass('c2');
+            $('p').append($(this).text());
+        });
+    });</script>

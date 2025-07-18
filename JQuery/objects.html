@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery $.each() with Object</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var obj = {
+        Name: 'Arun Banik',
+        Blog: 'encodedna.com'
+      };
+
+      $.each(obj, function (key, value) {
+        $('p').append(key + ': ' + value + '<br />');
+      });
+    });
+  </script>
+</head>
+<body>
+
+<p><b>Author Details:</b><br /></p>
+
+</body>
+</html>

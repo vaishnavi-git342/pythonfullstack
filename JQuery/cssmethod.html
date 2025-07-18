@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery CSS Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    function changeStyle() {
+      $("#myPara").css({
+        "color": "white",
+        "background-color": "blue",
+        "font-size": "20px",
+        "padding": "10px"
+      });
+    }
+  </script>
+</head>
+<body>
+
+<p id="myPara">This is a paragraph.</p>
+
+<button onclick="changeStyle()">Change Style</button>
+
+</body>
+</html>

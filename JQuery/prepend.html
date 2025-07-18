@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Prepend Example</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    function prependText() {
+      $("p").prepend("<b>Prepended text: </b>");
+    }
+  </script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+
+<button onclick="prependText()">Prepend text</button>
+
+</body>
+</html>

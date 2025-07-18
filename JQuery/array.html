@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Each Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var arr = ['I', 'live', 'in', 'India'];
+      
+      // Set font size once
+      $('p').css('fontSize', '25px');
+      
+      // Append each word from the array
+      $.each(arr, function (index, value) {
+        $('p').append(value + ' ');
+      });
+    });
+  </script>
+</head>
+<body>
+
+<p>Save Water save earth. </p>
+
+</body>
+</html>

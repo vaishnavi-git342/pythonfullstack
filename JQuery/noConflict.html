@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery noConflict Example</title>
+  <!-- Load Prototype.js (or any other library that uses $) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+
+  <!-- Load jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Give jQuery a different name to avoid conflict
+    var jq = jQuery.noConflict();
+
+    // Now you can use jq instead of $
+    jq(document).ready(function() {
+      jq("#demo").text("Changed by jQuery using noConflict!");
+    });
+
+    // Use $ for Prototype (or other libraries)
+    document.observe("dom:loaded", function() {
+      $("proto-demo").innerHTML = "Changed by Prototype.js!";
+    });
+  </script>
+</head>
+<body>
+
+  <p id="demo">This will be changed by jQuery</p>
+  <p id="proto-demo">This will be changed by Prototype</p>
+
+</body>
+</html>
+
